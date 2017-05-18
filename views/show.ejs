@@ -1,0 +1,465 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+     <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      
+
+
+body { 
+  width: 100%;
+  height:100%;
+  font-family: 'Open Sans', sans-serif;
+  background: #092756;
+  background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #670d10 0%, #092756 100%);
+  background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+  background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+  background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+  background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), linear-gradient(to bottom,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(135deg,  #670d10 0%,#092756 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
+}
+/*nav css close*/
+.profile-head { width:100%;
+background-image:url('op.png'); box-shadow: 0 0 5px #c5c5c5;float: left;padding: 15px 5px;}
+.profile-head img { height:150px; width:150px; margin:0 auto; border:5px solid #fff; border-radius:5px;}
+.profile-head h5 {width: 100%;padding:5px 5px 0px 5px;text-align:justify;font-weight: bold;color: #fff;font-size: 25px;text-transform:capitalize;
+margin-bottom: 0;}
+.profile-head p {width: 100%;text-align: justify;padding:0px 5px 5px 5px;color: #fff;font-size:17px;text-transform:capitalize;margin:0;}
+.profile-head a {width: 100%;text-align: center;padding: 10px 5px;color: #fff;font-size: 15px;text-transform: capitalize;}
+
+.profile-head ul { list-style:none;padding: 0;}
+.profile-head ul li { display:block; color:#ffffff;padding:5px;font-weight: 400;font-size: 15px;}
+.profile-head ul li:hover span { color:rgb(0, 4, 51);}
+.profile-head ul li span { color:#ffffff;padding-right: 10px;}
+.profile-head ul li a { color:#ffffff;}
+.profile-head h6 {width: 100%;text-align: center;font-weight: 100;color: #fff;font-size: 15px;text-transform: uppercase;margin-bottom: 0;}
+
+
+.nav-tabs {margin: 0;padding: 0;border: 0;}
+.nav-tabs > li > a {background: #DADADA;border-radius: 0;
+    box-shadow: inset 0 -8px 7px -9px rgba(0,0,0,.4),-2px -2px 5px -2px rgba(0,0,0,.4);}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover {background: #F5F5F5;
+    box-shadow: inset 0 0 0 0 rgba(0,0,0,.4),-2px -3px 5px -2px rgba(0,0,0,.4);}
+.tab-pane {background: #ffffff;box-shadow: 0 0 4px rgba(0,0,0,.4);border-radius: 0;text-align: center;padding: 10px;}
+.tab-content>.active {margin-top:50px;/*width:100% !important;*/} 
+
+/* edit profile css*/
+
+.hve-pro {    background-color:#75685f;padding: 5px; width:100%; height:auto;float:left;}
+.hve-pro p {float: left;color:#fff;font-size: 15px;text-transform: capitalize;padding: 5px 20px;font-family: 'Noto Sans', sans-serif;}
+h2.register { padding:10px 25px; text-transform:capitalize;font-size: 25px;color: rgb(255, 102, 0);}
+.fom-main { overflow:hidden;}
+
+legend {font-family: 'Bitter', serif;color:#ff3200;border-bottom:0px solid;}
+.main_form {background-color: #;}
+label.control-label {font-family: 'Noto Sans', sans-serif;font-weight: 100; margin-bottom:5px !important; 
+text-align:left !important; text-transform:uppercase; color:#798288;}
+.submit-button {color: #fff;background-color: #58c9a8;width:190px;border: 0px solid;border-radius: 0px; transition:all ease 0.3s;margin: 5px;
+float:left;}
+.submit-button:hover, .submit-button:focus {color: #fff;background-color: #58c9a8;}
+.hint_icon {color:#ff3200;}
+.form-control:focus {border-color: #ff3200;}
+select.selectpicker { color:#99999c;}
+select.selectpicker option { color:#000 !important;}
+select.selectpicker option:first-child { color:#99999c;}
+.input-group { width:100%;}
+.uplod-picture {width: 100%; background-color:#;color: #fff; padding:20px 10px;margin-bottom:10px;}
+.uplod-file {position: relative;overflow: hidden;color: #fff;background-color: rgb(0, 4, 51);border: 0px solid #a02e09;border-radius: 0px;
+ transition:all ease 0.3s;margin: 5px;}
+.uplod-file input[type=file] {position: absolute;top: 0;right: 0;min-width: 100%;min-height: 100%;font-size: 100px;text-align: right;
+filter: alpha(opacity=0);opacity: 0;outline: none;background: white;cursor: inherit;display: block;}
+.uplod-file:hover, .uplod-file:focus {color: #fff;background-color:rgb(255, 102, 0);}
+h4.pro-title { font-size:24px; color:rgba(0, 4, 51, 0.96); text-transform:capitalize; text-align:justify;padding: 10px 15px;font-family: 'Bitter', serif;}
+.bio-table { width:75%;border:0px solid;}
+.bio-table td {text-transform: capitalize;text-align: left;font-size: 15px;}
+.bio-table>tbody>tr>td { border:0px solid;text-transform: capitalize;color: rgb(0, 4, 51); font-size:15px;}
+.responsiv-table { border:0px solid;}
+.nav-menu li a {margin: 5px 5px 5px 5px;position: relative;display: block;padding: 10px 50px;border: 0px solid !important;box-shadow: none !important;
+background-color: #58c9a8!important;color: #fff !important;    white-space: nowrap;}
+.nav-menu li.active a {background-color: rgb(255, 102, 0) !important;}
+.stick{position:fixed !important;top:0;z-index:999 !important;width:100%;background:#ffffff !important;height:auto; transition:all ease 0.8s;
+-webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.75);}
+.stick a { line-height:20px !important;}
+.stick img { margin:0 !important;}
+
+
+@media all and (max-width:430px){
+.profile-head ul li {font-size: 12px !important;}
+.nav-menu li { width:50%;}
+.bio-table>tbody>tr>td {font-size: 13px;}
+
+}
+
+
+    </style>
+  </head>
+  <body>
+  <section>
+<div class="container" style="margin-top: 30px;">
+<div class="profile-head">
+<div class="col-md- col-sm-4 col-xs-12">
+<img src="uploads/search.jpg" class="img-responsive"/>
+<h6><%= Name; %></h6>
+</div><!--col-md-4 col-sm-4 col-xs-12 close-->
+
+<div class="col-md-5 col-sm-5 col-xs-12">
+<h5><%= Name; %></h5>
+<p>Drupal / Develpor </p>
+<ul>
+<li><span class="glyphicon glyphicon-briefcase"></span> <%= experience; %></li>
+<li><span class="glyphicon glyphicon-map-marker"></span> <%= country; %></li>
+<li><span class="glyphicon glyphicon-home"></span> Hyderabad,Adhrapradesh</li>
+<li><span class="glyphicon glyphicon-phone"></span> <a href="#" title="call">(+91) <%= Num; %></a></li>
+<li><span class="glyphicon glyphicon-envelope"></span><a href="#" title="mail"><%= Email; %></a></li>
+
+</ul>
+</div><!--col-md-8 col-sm-8 col-xs-12 close-->
+</div><!--profile-head close-->
+</div><!--container close-->
+
+
+<div id="sticky" class="container">
+    
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs nav-menu" role="tablist">
+      <li class="active">
+          <a href="#profile" role="tab" data-toggle="tab">
+              <i class="fa fa-male"></i> Profile
+          </a>
+      </li>
+      <li><a href="#change" role="tab" data-toggle="tab">
+          <i class="fa fa-key"></i> Edit Profile
+          </a>
+      </li>
+    </ul><!--nav-tabs close-->
+    
+    <!-- Tab panes -->
+    <div class="tab-content">
+    <div class="tab-pane fade active in" id="profile">
+    <div class="container">
+<div class="col-sm-11" style="float:left;">
+<div class="hve-pro">
+<p>Hello I’m Hariprasad G, a leading expert in interactive and creative developer specializing in the Web medium. 
+My graduation from JNTUK University with a Bachelor of Engineering majoring in Computer Science.</p>
+</div><!--hve-pro close-->
+</div><!--col-sm-12 close-->
+<br clear="all" />
+<div class="row">
+<div class="col-md-12">
+<h4 class="pro-title">Bio Graph</h4>
+</div><!--col-md-12 close-->
+
+
+<div class="col-md-6">
+
+<div class="table-responsive responsiv-table">
+  <table class="table bio-table">
+      <tbody>
+     <tr>      
+        <td>Firstname</td>
+        <td><%= Name; %></td> 
+     </tr>
+     <tr>    
+        <td>Lastname</td>
+        <td><%= LName; %></td>       
+     </tr>
+     <tr>    
+        <td>Birthday</td>
+        <td><%= Birthday; %></td>       
+    </tr>
+    <tr>    
+        <td>Contury</td>
+        <td><%= country; %></td>       
+    </tr>
+    <tr>
+        <td>Occupation</td>
+        <td><%= occupation; %></td> 
+     </tr>
+
+    </tbody>
+  </table>
+  </div><!--table-responsive close-->
+</div><!--col-md-6 close-->
+
+<div class="col-md-6">
+
+<div class="table-responsive responsiv-table">
+  <table class="table bio-table">
+      <tbody>
+     <tr>  
+        <td>Emai Id</td>
+        <td><%= Email; %></td> 
+     </tr>
+     <tr>    
+        <td>Mobile</td>
+        <td><%= Num; %></td>       
+     </tr>
+     <tr>    
+        <td>Phone</td>
+        <td><%= Num; %></td>       
+    </tr>
+    <tr>    
+        <td>Experience</td>
+        <td><%= experience; %></td>       
+    </tr>
+    <tr>
+        <td>Twitter</td>
+        <td><%= tweet; %></td> 
+     </tr>
+
+    </tbody>
+  </table>
+  </div><!--table-responsive close-->
+</div><!--col-md-6 close-->
+
+</div><!--row close-->
+
+</div><!--container close-->
+</div><!--tab-pane close-->
+      
+      
+<div class="tab-pane fade" id="change">
+<div class="container fom-main">
+<div class="row">
+<div class="col-sm-12">
+<h2 class="register">Edit Your Profile</h2>
+</div><!--col-sm-12 close-->
+
+</div><!--row close-->
+<br />
+<div class="row">
+
+    <form class="form-horizontal main_form text-left" action="/updatedetails" method="post"   id = "uploadForm"> 
+<fieldset>
+
+
+
+
+
+<div class="form-group col-md-12">
+  <label class="col-md-10 control-label">First Name</label>  
+  <div class="col-md-12 inputGroupContainer">
+  <div class="input-group">
+  <input  name="first_name" placeholder="First Name" class="form-control"   type="text" value="<%= Name; %>">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group col-md-12">
+  <label class="col-md-10 control-label" >Last Name</label> 
+    <div class="col-md-12 inputGroupContainer">
+    <div class="input-group">
+  <input name="last_name" placeholder="Last Name" class="form-control"   type="text" value="<%= LName; %>">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+       <div class="form-group col-md-12">
+  <label class="col-md-10 control-label">E-Mail</label>  
+    <div class="col-md-12 inputGroupContainer">
+    <div class="input-group">
+  <input name="email" placeholder="E-Mail Address" class="form-control"   type="text" value="<%= Email; %>">
+    </div>
+  </div>
+</div>
+<!-- Text input-->
+       
+<div class="form-group col-md-12">
+  <label class="col-md-10 control-label">Phone #</label>  
+    <div class="col-md-12 inputGroupContainer">
+    <div class="input-group">
+  <input name="phone" placeholder="(845)555-1212" class="form-control"  type="text" value="<%= Num; %>">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+      
+ <div class="form-group col-md-12">
+  <label class="col-md-10 control-label">Address</label>
+    <div class="col-md-12 inputGroupContainer">
+    <div class="input-group">
+            <textarea class="form-control" name="address" placeholder="Project Description"></textarea>
+  </div>
+  </div>
+</div>
+
+ <div class="form-group col-md-12">
+  <label class="col-md-10 control-label">Project Description</label>
+    <div class="col-md-12 inputGroupContainer">
+    <div class="input-group">
+            <textarea class="form-control" name="project" placeholder="Project Description"></textarea>
+  </div>
+  </div>
+</div>
+
+<div class="form-group col-md-12"> 
+  <label class="col-md-10 control-label">Industry</label>
+  
+    <div class="col-md-12 selectContainer">
+    <div class="input-group">
+    <input  placeholder="state" name="industry" class="form-control"  type="text">
+  </div>
+</div>
+</div>
+<!-- Select Basic -->
+   
+<div class="form-group col-md-12"> 
+  <label class="col-md-10 control-label">Qualification</label>
+    <div class="col-md-12 selectContainer">
+    <div class="input-group">
+    <input name="qualification" placeholder="qualification" class="form-control"  type="text" >
+  </div>
+    <!-- <div class="input-group">
+    <select name="state" class="form-control selectpicker" >
+           <option value=" " >your Qualification</option>
+      <option>M.A.</option>
+      <option>B.A.</option>
+      <option >B.Ed</option>
+    </select>
+  </div> -->
+</div>
+</div>
+
+<div class="form-group col-md-12"> 
+  <label class="col-md-10 control-label">Expertise areas</label>
+    <div class="col-md-12 selectContainer">
+    <div class="input-group">
+    <input name="Expertise" placeholder="expertise" class="form-control"  type="text" >
+  </div>
+    <!-- <div class="input-group">
+    <select name="state" class="form-control selectpicker" >
+      <option value=" " >Expertise areas</option>
+      <option>Expertise areas1</option>
+      <option>Expertise areas1</option>
+      <option>Expertise areas1</option>
+    </select>
+  </div> -->
+</div>
+</div>
+
+<div class="form-group col-md-12"> 
+  <label class="col-md-10 control-label">Experience</label>
+    <div class="col-md-12 selectContainer">
+    <div class="input-group">
+    <input name="Experience" placeholder="experience" class="form-control"  type="text" >
+  </div>
+</div>
+</div>
+
+<div class="form-group col-md-12"> 
+  <label class="col-md-10 control-label">Salary expected</label>
+    <div class="col-md-12 selectContainer">
+    <div class="input-group">
+    <input name="Salary" placeholder="salary" class="form-control"  type="text">
+  </div>
+</div>
+</div>
+
+<div class="form-group col-md-12"> 
+  <label class="col-md-10 control-label">Preferred Location</label>
+    <div class="col-md-12 selectContainer">
+    <div class="input-group">
+<input name="PreferredLocation" placeholder="Preferred Location" class="form-control"  type="text" value="<%= PreferredLocation; %>">
+  </div>
+</div>
+</div>
+
+<div class="form-group col-md-12">
+  <label class="col-md-10 control-label">Choose Password</label>  
+  <div class="col-md-12 inputGroupContainer">
+  <div class="input-group">
+  <input  name="choosepassword" placeholder="Choose Password" class="form-control"  type="text" value="<%= Password; %>">
+    </div>
+  </div>
+</div>
+
+<div class="form-group col-md-12">
+  <label class="col-md-10 control-label">Confirm Password</label>  
+  <div class="col-md-12 inputGroupContainer">
+  <div class="input-group">
+  <input  name="confirm_password" placeholder="Confirm Password" class="form-control"  type="password" value="<%= Password; %>">
+    </div>
+  </div>
+</div>
+
+<!-- radio checks -->
+ <div class="form-group col-md-12">
+                        <label class="col-md-10 control-label">Gender</label>
+                        <div class="col-md-6">
+                            <div class="radio col-md-2">
+                                <label>
+                                    <input type="radio" name="hosting" value="yes"/> Male
+                                </label>
+                            </div>
+                            <div class="radio col-md-2">
+                                <label>
+                                    <input type="radio" name="hosting" value="no"/> Female
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- upload profile picture -->
+<div class="col-md-12 text-left">
+<div class="uplod-picture">
+
+<form method="post" enctype="multipart/form-data" action="/updatedetailsphoto" id="img" >
+<span class="btn btn-default uplod-file">
+    Upload Photo <input type="file" name="pic"/>
+
+</span>
+<input type="submit" value="submit" name="submit">
+ </form>
+<!--<span class="btn btn-default uplod-file">
+    Upload Resume <input type="file" />
+</span>
+<span class="btn btn-default uplod-file">
+    Upload Video <input type="file" />
+</span>
+</div><!--uplod-picture close-->
+</div><!--col-md-12 close-->
+
+<!-- Button -->
+<div class="form-group col-md-10">
+  <div class="col-md-6">
+    <button type="submit" class="btn btn-warning submit-button" >Save</button>
+    <button type="Reset" class="btn btn-warning submit-button" >Reset</button>
+
+  </div>
+</div>
+</fieldset>
+</form>
+</div><!--row close-->
+</div><!--container close -->          
+</div><!--tab-pane close-->
+</div><!--tab-content close-->
+</div><!--container close-->
+
+<a href="/wall">Go to wall</a>
+
+</section><!--section close-->
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+module.exports=function(e,s,n){e.get("/",function(o,i){sess=o.session,console.log("index controller entered"),sess.user?(console.log("you are logged innbro:)"),i.render("show.ejs")):(e.set("views","./views"),e.set("view engine","ejs"),e.use(s.static(n.join(__dirname,"assets"))),i.render("index.ejs"))})};

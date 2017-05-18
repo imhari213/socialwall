@@ -1,0 +1,1 @@
+module.exports=function(e,s,o){e.post("/logout",function(n,i,t){n.session.destroy(function(n){n?console.log(n):(e.set("views","./views"),e.set("view engine","ejs"),e.use(s.static(o.join(__dirname,"assets"))),i.render("login.ejs"))})})};

@@ -1,0 +1,1 @@
+module.exports=function(e,s,t,i){e.use(s.static("views")),e.get("/newpassword",function(i,n){var a=i.query.Id;e.set("views","./views"),e.set("view engine","ejs"),e.use(s.static(t.join(__dirname,"assets"))),n.render("newpassword.ejs",{dynamic_textbox:a})})};

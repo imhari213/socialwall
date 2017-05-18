@@ -1,0 +1,27 @@
+<div class="tab-pane" id="add-comment">
+<div class="media media-replied block" id="block">
+<%  for(i=0; i<=c; i++) { %>
+<form method="post" action="/stick">
+                                    <a class="pull-left " href="#">
+                                      <img class="media-object img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/ManikRathee/128.jpg" alt="profile">
+                                    </a>
+                                    <div class="media-body">
+                                      <div class="well well-lg">
+                                        <h4 class="media-heading text-uppercase reviews"><span class="glyphicon glyphicon-share-alt"></span> <%= username; %></h4>
+                                          <ul class="media-date text-uppercase reviews list-inline">
+                                      <li class="dd"><%= day; %></li>
+                                            <li class="mm"><%= month; %></li>
+                                            <li class="aaaa"><%= year; %></li>
+                                          </ul>
+
+                                          <p class="media-comment"><textarea class="form-control" name="postmsg" id="addComment" rows="5" placeholder="post your comment here"></textarea>
+                                            
+                                          </p>
+
+                                         <button class="btn btn-success btn-circle text-uppercase" type="submit" id="submitcomment" value=<% "postsuser[i]" %>><span class="glyphicon glyphicon-send"></span> POST</button>
+
+                                      </div>              
+                                    </div>
+                                    <% } %>
+                                </div>
+                                </div>
