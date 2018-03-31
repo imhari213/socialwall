@@ -40,8 +40,7 @@ var validOptions = {
  // apikey: 'ku1dguKTXJc-DFHxUtMt05lEYb4NRmLyYNRbW7dkVL'
 
 
-                username: 'haricm213@gmail.com',
-                password: 'H@ri3296so'
+               
  
 
   };
